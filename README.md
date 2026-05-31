@@ -1,87 +1,53 @@
-# Welcome to React Router!
+# Eba Sheba — Luxury Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Official portfolio website for Eba Sheba, award-winning Indonesian Make-Up Artist, film professional, and Executive Producer.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Stack
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- React Router v7 + Vite + SSR
+- Tailwind CSS v4
+- Framer Motion
+- React Icons
+- TypeScript
 
 ## Getting Started
 
-### Installation
-
-Install the dependencies:
-
 ```bash
-npm install
+bun install
+bun run dev
 ```
 
-### Development
+Open [http://localhost:5173](http://localhost:5173).
 
-Start the development server with HMR:
+## Scripts
 
-```bash
-npm run dev
-```
+| Command | Description |
+|---------|-------------|
+| `bun run dev` | Start development server |
+| `bun run build` | Production build |
+| `bun run start` | Serve production build |
+| `bun run typecheck` | TypeScript check |
 
-Your application will be available at `http://localhost:5173`.
+## Content
 
-## Building for Production
+Editable data modules live in `app/data/`:
 
-Create a production build:
+- `posters.ts` — TMDB poster URLs for filmography entries
+- `awards.ts` — Awards and nominations
+- `filmography.ts` — Film, TV, and production credits
+- `portfolio.ts` — Gallery items by category
+- `media.ts` — Press and media features
+- `testimonials.ts` — Industry testimonials
+- `featured-project.ts` — Featured case study
+- `stats.ts` — Hero statistics
 
-```bash
-npm run build
-```
+Replace placeholder images in `public/images/placeholders/` with real photography when available.
 
 ## Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
-
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+bun run build
+bun run start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Or use the included Dockerfile for container deployment.
